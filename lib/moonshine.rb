@@ -1,6 +1,6 @@
 require 'shadow_puppet'
 
-require 'erb'
+require 'erubis'
 require 'active_support/inflector'
 require 'pathname'
 

@@ -157,7 +157,7 @@ class Moonshine::Manifest < ShadowPuppet::Manifest
                         else
                           raise LoadError, "Can't find template #{pathname}"
                         end
-    ERB.new(template_contents).result(b)
+    Erubis::Eruby.new(template_contents, :trim => true).result(b)
   end
 
   def template(pathname, b = binding)
